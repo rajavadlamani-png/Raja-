@@ -20,15 +20,9 @@
     --line:rgba(255,255,255,.09);
 }
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0;}
 
-html{
-    scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
 body{
     font-family:Arial,Helvetica,sans-serif;
@@ -37,10 +31,7 @@ body{
     line-height:1.6;
 }
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
+a{text-decoration:none;color:inherit;}
 
 .container{
     width:min(1180px,92%);
@@ -73,9 +64,7 @@ nav{
     letter-spacing:1px;
 }
 
-.logo span{
-    color:var(--green);
-}
+.logo span{color:var(--green);}
 
 .nav-links{
     display:flex;
@@ -88,9 +77,7 @@ nav{
     transition:.25s;
 }
 
-.nav-links a:hover{
-    color:var(--green);
-}
+.nav-links a:hover{color:var(--green);}
 
 /* HERO */
 
@@ -111,9 +98,7 @@ nav{
     gap:55px;
 }
 
-.hero-copy{
-    min-width:0;
-}
+.hero-copy{min-width:0;}
 
 .eyebrow{
     color:var(--green);
@@ -131,9 +116,7 @@ nav{
     max-width:760px;
 }
 
-.hero h1 span{
-    color:var(--green);
-}
+.hero h1 span{color:var(--green);}
 
 .hero-description{
     color:#c2cdc5;
@@ -158,9 +141,7 @@ nav{
     transition:.3s;
 }
 
-.btn:hover{
-    transform:translateY(-3px);
-}
+.btn:hover{transform:translateY(-3px);}
 
 .btn-primary{
     background:var(--green);
@@ -211,13 +192,9 @@ nav{
 
 /* GENERAL SECTIONS */
 
-section{
-    padding:100px 0;
-}
+section{padding:100px 0;}
 
-.section-dark{
-    background:var(--bg2);
-}
+.section-dark{background:var(--bg2);}
 
 .section-label{
     color:var(--green);
@@ -254,9 +231,7 @@ section{
     font-size:17px;
 }
 
-.profile-text p{
-    margin-bottom:20px;
-}
+.profile-text p{margin-bottom:20px;}
 
 .stats{
     display:grid;
@@ -366,9 +341,7 @@ section{
     font-size:14px;
 }
 
-.journey-highlight strong{
-    color:var(--green);
-}
+.journey-highlight strong{color:var(--green);}
 
 /* EXPERTISE */
 
@@ -474,6 +447,25 @@ section{
     display:block;
 }
 
+.project-featured{
+    border-color:rgba(168,213,111,.35);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(168,213,111,.07),
+            rgba(255,255,255,.025)
+        );
+}
+
+.project-tag{
+    display:inline-block;
+    color:var(--green);
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:7px;
+}
+
 /* GOVERNANCE */
 
 .credentials{
@@ -515,9 +507,7 @@ section{
     margin-bottom:10px;
 }
 
-.thought-card p{
-    color:var(--muted);
-}
+.thought-card p{color:var(--muted);}
 
 /* CONTACT */
 
@@ -573,43 +563,29 @@ footer{
 
 @media(max-width:900px){
 
-    .nav-links{
-        display:none;
-    }
+    .nav-links{display:none;}
 
     .hero-grid,
     .profile-grid{
         grid-template-columns:1fr;
     }
 
-    .hero{
-        text-align:center;
-    }
+    .hero{text-align:center;}
 
     .hero-description{
         margin-left:auto;
         margin-right:auto;
     }
 
-    .hero-actions{
-        justify-content:center;
-    }
+    .hero-actions{justify-content:center;}
 
-    .hero-photo{
-        order:-1;
-    }
+    .hero-photo{order:-1;}
 
-    .cards{
-        grid-template-columns:1fr 1fr;
-    }
+    .cards{grid-template-columns:1fr 1fr;}
 
-    .credentials{
-        grid-template-columns:1fr 1fr;
-    }
+    .credentials{grid-template-columns:1fr 1fr;}
 
-    .transformation{
-        grid-template-columns:1fr 1fr;
-    }
+    .transformation{grid-template-columns:1fr 1fr;}
 
     .journey-item{
         grid-template-columns:60px 1fr;
@@ -619,13 +595,9 @@ footer{
 
 @media(max-width:600px){
 
-    section{
-        padding:75px 0;
-    }
+    section{padding:75px 0;}
 
-    .hero{
-        padding-top:105px;
-    }
+    .hero{padding-top:105px;}
 
     .hero h1{
         font-size:43px;
@@ -650,9 +622,7 @@ footer{
         height:280px;
     }
 
-    .journey-line{
-        left:18px;
-    }
+    .journey-line{left:18px;}
 
     .journey-item{
         grid-template-columns:45px 1fr;
@@ -741,7 +711,6 @@ footer{
 
     </div>
 
-
     <div class="hero-photo">
 
         <div class="hero-photo-frame">
@@ -809,7 +778,6 @@ footer{
 
         </div>
 
-
         <div class="stats">
 
             <div class="stat">
@@ -870,19 +838,13 @@ footer{
         systems, artificial intelligence, climate resilience and governance.
     </p>
 
-
     <div class="journey-wrap">
 
         <div class="journey-line"></div>
 
-
-        <!-- STAGE 1 -->
-
         <div class="journey-item">
 
-            <div class="journey-marker">
-                01
-            </div>
+            <div class="journey-marker">01</div>
 
             <div class="journey-card">
 
@@ -911,13 +873,9 @@ footer{
         </div>
 
 
-        <!-- STAGE 2 -->
-
         <div class="journey-item">
 
-            <div class="journey-marker">
-                02
-            </div>
+            <div class="journey-marker">02</div>
 
             <div class="journey-card">
 
@@ -947,13 +905,9 @@ footer{
         </div>
 
 
-        <!-- STAGE 3 -->
-
         <div class="journey-item">
 
-            <div class="journey-marker">
-                03
-            </div>
+            <div class="journey-marker">03</div>
 
             <div class="journey-card">
 
@@ -983,13 +937,9 @@ footer{
         </div>
 
 
-        <!-- STAGE 4 -->
-
         <div class="journey-item">
 
-            <div class="journey-marker">
-                04
-            </div>
+            <div class="journey-marker">04</div>
 
             <div class="journey-card">
 
@@ -1020,13 +970,9 @@ footer{
         </div>
 
 
-        <!-- STAGE 5 -->
-
         <div class="journey-item">
 
-            <div class="journey-marker">
-                05
-            </div>
+            <div class="journey-marker">05</div>
 
             <div class="journey-card">
 
@@ -1209,74 +1155,176 @@ footer{
     </h2>
 
     <p class="section-intro">
-        Selected areas where agriculture, technology, analytics and
-        sustainability come together. Click each initiative to explore.
+        Selected initiatives where physical infrastructure,
+        agriculture, technology, analytics and sustainability
+        come together to shape the next generation of seed
+        supply chains.
     </p>
 
 
-    <div class="project">
+    <!-- SAMGRA -->
+
+    <div class="project project-featured">
 
         <div class="project-header">
-            <h3>AI-Driven Seed Production Planning</h3>
+
+            <div>
+
+                <div class="project-tag">
+                    Flagship Transformation Project
+                </div>
+
+                <h3>
+                    SAMGRA — Integrated Seed Processing & Cold Storage Complex
+                </h3>
+
+            </div>
+
             <div class="project-icon">+</div>
+
         </div>
 
         <div class="project-content">
-            Predictive and prescriptive analytics for seed production
-            planning using historical production, hybrid, geography
-            and environmental information.
+
+            <p>
+                A next-generation integrated seed processing and
+                cold-storage complex being developed in collaboration
+                with <strong>Prasad Seed Farms</strong>.
+            </p>
+
+            <br>
+
+            <p>
+                SAMGRA brings together advanced seed processing,
+                controlled cold storage, modern material handling,
+                process integration and automation within an integrated
+                infrastructure platform designed for scale, quality,
+                efficiency and operational control.
+            </p>
+
+            <br>
+
+            <p>
+                The project represents a shift from conventional
+                standalone processing and storage toward an integrated,
+                technology-enabled seed infrastructure model.
+            </p>
+
+            <br>
+
+            <div class="journey-highlight">
+
+                <strong>Focus:</strong>
+                Integrated Processing · Cold Storage · Advanced Machinery ·
+                Automation · Process Integration · Quality · Scale
+
+            </div>
+
         </div>
 
     </div>
 
 
+    <!-- AI PRODUCTION PLANNING -->
+
     <div class="project">
 
         <div class="project-header">
-            <h3>ANVORA — Seed Climate Ledger</h3>
+
+            <h3>
+                AI-Driven Seed Production Planning
+            </h3>
+
             <div class="project-icon">+</div>
+
         </div>
 
         <div class="project-content">
+
+            Predictive and prescriptive analytics for seed production
+            planning using historical production, hybrid, geography
+            and environmental information.
+
+        </div>
+
+    </div>
+
+
+    <!-- ANVORA -->
+
+    <div class="project">
+
+        <div class="project-header">
+
+            <h3>
+                ANVORA — Seed Climate Ledger
+            </h3>
+
+            <div class="project-icon">+</div>
+
+        </div>
+
+        <div class="project-content">
+
             An interactive framework exploring climate-related
             measurement across seed and agricultural supply chains.
+
             <br><br>
 
             <span style="color:#8d9b91;">
                 ANVORA live tool link will be connected here.
             </span>
+
         </div>
 
     </div>
 
 
+    <!-- DIGITAL TRACEABILITY -->
+
     <div class="project">
 
         <div class="project-header">
-            <h3>Digital Seed Traceability</h3>
+
+            <h3>
+                Digital Seed Traceability
+            </h3>
+
             <div class="project-icon">+</div>
+
         </div>
 
         <div class="project-content">
+
             Exploring digital traceability, QR-based systems,
             field-level data and integration with downstream
             seed processing systems.
+
         </div>
 
     </div>
 
 
+    <!-- CLIMATE RESILIENCE -->
+
     <div class="project">
 
         <div class="project-header">
-            <h3>Climate-Resilient Seed Supply Chains</h3>
+
+            <h3>
+                Climate-Resilient Seed Supply Chains
+            </h3>
+
             <div class="project-icon">+</div>
+
         </div>
 
         <div class="project-content">
+
             Integrating resource efficiency, climate data, carbon
             measurement and supply-chain decision-making into
             the future design of seed systems.
+
         </div>
 
     </div>
@@ -1354,7 +1402,9 @@ footer{
 
         <div class="thought-card">
 
-            <h3>The Invisible Helper</h3>
+            <h3>
+                The Invisible Helper
+            </h3>
 
             <p>
                 <em>
@@ -1375,7 +1425,9 @@ footer{
 
         <div class="thought-card">
 
-            <h3>New-Age Seed Supply Chains</h3>
+            <h3>
+                New-Age Seed Supply Chains
+            </h3>
 
             <p>
                 Exploring the future of seed systems through AI,
@@ -1432,7 +1484,7 @@ footer{
 
         <a
             class="btn"
-            href="tel:+9199592166664"
+            href="tel:+919959216664"
         >
             Call
         </a>
