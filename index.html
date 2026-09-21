@@ -20,9 +20,15 @@
     --line:rgba(255,255,255,.09);
 }
 
-*{box-sizing:border-box;margin:0;padding:0;}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-html{scroll-behavior:smooth;}
+html{
+    scroll-behavior:smooth;
+}
 
 body{
     font-family:Arial,Helvetica,sans-serif;
@@ -31,7 +37,10 @@ body{
     line-height:1.6;
 }
 
-a{text-decoration:none;color:inherit;}
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
 .container{
     width:min(1180px,92%);
@@ -64,7 +73,9 @@ nav{
     letter-spacing:1px;
 }
 
-.logo span{color:var(--green);}
+.logo span{
+    color:var(--green);
+}
 
 .nav-links{
     display:flex;
@@ -77,7 +88,9 @@ nav{
     transition:.25s;
 }
 
-.nav-links a:hover{color:var(--green);}
+.nav-links a:hover{
+    color:var(--green);
+}
 
 /* HERO */
 
@@ -98,7 +111,9 @@ nav{
     gap:55px;
 }
 
-.hero-copy{min-width:0;}
+.hero-copy{
+    min-width:0;
+}
 
 .eyebrow{
     color:var(--green);
@@ -116,7 +131,9 @@ nav{
     max-width:760px;
 }
 
-.hero h1 span{color:var(--green);}
+.hero h1 span{
+    color:var(--green);
+}
 
 .hero-description{
     color:#c2cdc5;
@@ -141,7 +158,9 @@ nav{
     transition:.3s;
 }
 
-.btn:hover{transform:translateY(-3px);}
+.btn:hover{
+    transform:translateY(-3px);
+}
 
 .btn-primary{
     background:var(--green);
@@ -192,9 +211,13 @@ nav{
 
 /* GENERAL SECTIONS */
 
-section{padding:100px 0;}
+section{
+    padding:100px 0;
+}
 
-.section-dark{background:var(--bg2);}
+.section-dark{
+    background:var(--bg2);
+}
 
 .section-label{
     color:var(--green);
@@ -231,7 +254,9 @@ section{padding:100px 0;}
     font-size:17px;
 }
 
-.profile-text p{margin-bottom:20px;}
+.profile-text p{
+    margin-bottom:20px;
+}
 
 .stats{
     display:grid;
@@ -341,7 +366,9 @@ section{padding:100px 0;}
     font-size:14px;
 }
 
-.journey-highlight strong{color:var(--green);}
+.journey-highlight strong{
+    color:var(--green);
+}
 
 /* EXPERTISE */
 
@@ -466,6 +493,54 @@ section{padding:100px 0;}
     margin-bottom:7px;
 }
 
+/* RECOGNITION */
+
+.recognition-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.recognition-card{
+    padding:32px;
+    border:1px solid var(--line);
+    border-radius:16px;
+    background:rgba(255,255,255,.025);
+}
+
+.recognition-card h3{
+    font-size:25px;
+    margin-bottom:22px;
+}
+
+.recognition-item{
+    padding:17px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.recognition-item:last-child{
+    border-bottom:none;
+}
+
+.recognition-item strong{
+    display:block;
+    color:#e8eee9;
+    font-size:15px;
+    margin-bottom:4px;
+}
+
+.recognition-item span{
+    color:var(--muted);
+    font-size:13px;
+}
+
+.recognition-year{
+    color:var(--green);
+    font-size:11px;
+    letter-spacing:1.5px;
+    margin-bottom:4px;
+}
+
 /* GOVERNANCE */
 
 .credentials{
@@ -507,7 +582,9 @@ section{padding:100px 0;}
     margin-bottom:10px;
 }
 
-.thought-card p{color:var(--muted);}
+.thought-card p{
+    color:var(--muted);
+}
 
 /* CONTACT */
 
@@ -563,29 +640,44 @@ footer{
 
 @media(max-width:900px){
 
-    .nav-links{display:none;}
+    .nav-links{
+        display:none;
+    }
 
     .hero-grid,
-    .profile-grid{
+    .profile-grid,
+    .recognition-grid{
         grid-template-columns:1fr;
     }
 
-    .hero{text-align:center;}
+    .hero{
+        text-align:center;
+    }
 
     .hero-description{
         margin-left:auto;
         margin-right:auto;
     }
 
-    .hero-actions{justify-content:center;}
+    .hero-actions{
+        justify-content:center;
+    }
 
-    .hero-photo{order:-1;}
+    .hero-photo{
+        order:-1;
+    }
 
-    .cards{grid-template-columns:1fr 1fr;}
+    .cards{
+        grid-template-columns:1fr 1fr;
+    }
 
-    .credentials{grid-template-columns:1fr 1fr;}
+    .credentials{
+        grid-template-columns:1fr 1fr;
+    }
 
-    .transformation{grid-template-columns:1fr 1fr;}
+    .transformation{
+        grid-template-columns:1fr 1fr;
+    }
 
     .journey-item{
         grid-template-columns:60px 1fr;
@@ -595,9 +687,13 @@ footer{
 
 @media(max-width:600px){
 
-    section{padding:75px 0;}
+    section{
+        padding:75px 0;
+    }
 
-    .hero{padding-top:105px;}
+    .hero{
+        padding-top:105px;
+    }
 
     .hero h1{
         font-size:43px;
@@ -608,7 +704,8 @@ footer{
     .cards,
     .credentials,
     .thought-grid,
-    .transformation{
+    .transformation,
+    .recognition-grid{
         grid-template-columns:1fr;
     }
 
@@ -622,7 +719,9 @@ footer{
         height:280px;
     }
 
-    .journey-line{left:18px;}
+    .journey-line{
+        left:18px;
+    }
 
     .journey-item{
         grid-template-columns:45px 1fr;
@@ -662,6 +761,7 @@ footer{
         <a href="#journey">Journey</a>
         <a href="#expertise">Expertise</a>
         <a href="#innovation">Innovation</a>
+        <a href="#recognition">Recognition</a>
         <a href="#governance">Governance</a>
         <a href="#thought">Thought Leadership</a>
         <a href="#contact">Connect</a>
@@ -872,7 +972,6 @@ footer{
 
         </div>
 
-
         <div class="journey-item">
 
             <div class="journey-marker">02</div>
@@ -903,7 +1002,6 @@ footer{
             </div>
 
         </div>
-
 
         <div class="journey-item">
 
@@ -936,7 +1034,6 @@ footer{
 
         </div>
 
-
         <div class="journey-item">
 
             <div class="journey-marker">04</div>
@@ -961,14 +1058,13 @@ footer{
 
                 <div class="journey-highlight">
                     <strong>Emerging frontier:</strong>
-                    Satellite imagery · Weather data · AI · Predictive
-                    & prescriptive analytics
+                    Satellite imagery · Remote sensing · Crop monitoring ·
+                    Weather data · AI · Predictive analytics
                 </div>
 
             </div>
 
         </div>
-
 
         <div class="journey-item">
 
@@ -1047,8 +1143,9 @@ footer{
             <div class="card-number">03</div>
             <h3>Digital Agriculture</h3>
             <p>
-                Connecting field data, satellite imagery, weather
-                information, traceability and enterprise systems.
+                Satellite-enabled remote sensing, crop monitoring,
+                field intelligence, weather data, traceability and
+                connected agricultural systems.
             </p>
         </div>
 
@@ -1242,8 +1339,51 @@ footer{
         <div class="project-content">
 
             Predictive and prescriptive analytics for seed production
-            planning using historical production, hybrid, geography
-            and environmental information.
+            planning using historical production, hybrid, geography,
+            satellite imagery, remote sensing, crop-monitoring and
+            environmental information.
+
+        </div>
+
+    </div>
+
+
+    <!-- SATELLITE REMOTE SENSING -->
+
+    <div class="project">
+
+        <div class="project-header">
+
+            <h3>
+                Satellite-Enabled Remote Sensing & Crop Monitoring
+            </h3>
+
+            <div class="project-icon">+</div>
+
+        </div>
+
+        <div class="project-content">
+
+            A satellite-enabled remote sensing and crop-monitoring
+            capability developed to provide field-level visibility
+            across crop development, production conditions and
+            spatial variability.
+
+            <br><br>
+
+            The capability creates a scalable agricultural data layer
+            that can support production planning, crop assessment,
+            early-stage intelligence and AI-driven decision-making.
+
+            <br><br>
+
+            <div class="journey-highlight">
+
+                <strong>Data layer:</strong>
+                Satellite imagery · Remote sensing · Crop monitoring ·
+                Spatial intelligence · AI
+
+            </div>
 
         </div>
 
@@ -1324,6 +1464,232 @@ footer{
             Integrating resource efficiency, climate data, carbon
             measurement and supply-chain decision-making into
             the future design of seed systems.
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- RECOGNITION & PUBLICATIONS -->
+
+<section id="recognition">
+
+<div class="container">
+
+    <div class="section-label">
+        Recognition & Publications
+    </div>
+
+    <h2 class="section-title">
+        Industry recognition.<br>
+        Ideas shared beyond the organisation.
+    </h2>
+
+    <p class="section-intro">
+        Selected professional recognitions, industry acknowledgements
+        and published contributions reflecting a career at the
+        intersection of supply chain, agriculture, innovation and
+        transformation.
+    </p>
+
+    <div class="recognition-grid">
+
+
+        <!-- AWARDS -->
+
+        <div class="recognition-card">
+
+            <h3>
+                Honors & Awards
+            </h3>
+
+
+            <div class="recognition-item">
+
+                <div class="recognition-year">
+                    2025
+                </div>
+
+                <strong>
+                    Supply Chain Visionary of the Year – Agriculture
+                </strong>
+
+                <span>
+                    Forttuna Global Excellence Awards
+                </span>
+
+            </div>
+
+
+            <div class="recognition-item">
+
+                <div class="recognition-year">
+                    2023
+                </div>
+
+                <strong>
+                    Manager of the Year
+                </strong>
+
+                <span>
+                    Hyderabad Management Association
+                </span>
+
+            </div>
+
+
+            <div class="recognition-item">
+
+                <div class="recognition-year">
+                    2023
+                </div>
+
+                <strong>
+                    Sustainable Supply Chain Leadership – Silver
+                </strong>
+
+                <span>
+                    BW Supply Chain Competitiveness Awards
+                </span>
+
+            </div>
+
+
+            <div class="recognition-item">
+
+                <div class="recognition-year">
+                    2022
+                </div>
+
+                <strong>
+                    Leader with Strategic Vision – Supply Chain
+                </strong>
+
+                <span>
+                    ABSA
+                </span>
+
+            </div>
+
+
+            <div class="recognition-item">
+
+                <div class="recognition-year">
+                    2021
+                </div>
+
+                <strong>
+                    Pros to Know
+                </strong>
+
+                <span>
+                    Supply & Demand Chain Executive
+                </span>
+
+            </div>
+
+
+            <div class="recognition-item">
+
+                <div class="recognition-year">
+                    2019
+                </div>
+
+                <strong>
+                    SCM Innovation / CPO Innovation Awards
+                </strong>
+
+                <span>
+                    Supply Chain Management Innovation Recognition
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- PUBLICATIONS -->
+
+        <div class="recognition-card">
+
+            <h3>
+                Publications & Contributions
+            </h3>
+
+
+            <div class="recognition-item">
+
+                <div class="recognition-year">
+                    IEOM
+                </div>
+
+                <strong>
+                    AI in Seed Supply Chain Forecasting and Simulation:
+                    A Dynamic Tool Incorporated with Conversational AI
+                </strong>
+
+                <span>
+                    IEOM India Congress contribution
+                </span>
+
+            </div>
+
+
+            <div class="recognition-item">
+
+                <div class="recognition-year">
+                    SEED TIMES
+                </div>
+
+                <strong>
+                    Securing the Seed’s Promise:
+                    The Role of Post-Harvest Operations in a Changing Landscape
+                </strong>
+
+                <span>
+                    National Seed Association of India
+                </span>
+
+            </div>
+
+
+            <div class="recognition-item">
+
+                <div class="recognition-year">
+                    THOUGHT LEADERSHIP
+                </div>
+
+                <strong>
+                    The Invisible Helper
+                </strong>
+
+                <span>
+                    AI's Quiet Revolution in Seed Supply Chains
+                </span>
+
+            </div>
+
+
+            <div class="recognition-item">
+
+                <div class="recognition-year">
+                    THOUGHT LEADERSHIP
+                </div>
+
+                <strong>
+                    New-Age Seed Supply Chains
+                </strong>
+
+                <span>
+                    Perspectives on AI, digital agriculture and
+                    sustainable supply-chain transformation
+                </span>
+
+            </div>
 
         </div>
 
