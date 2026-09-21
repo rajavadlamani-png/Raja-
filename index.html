@@ -6,21 +6,18 @@
 
 <title>Raja Vadlamani | Seed & Agri-Business Transformation Leader</title>
 
-<meta name="description"
-content="Raja Vadlamani — CXO leader in seed and agri-business, supply chain transformation, AI, digital agriculture, sustainability and governance.">
+<meta name="description" content="Raja Vadlamani — CXO leader in seed and agri-business, supply chain transformation, AI, digital agriculture, sustainability and governance.">
 
 <style>
-
 :root{
     --bg:#07110d;
-    --bg2:#0c1a13;
+    --bg2:#0c1912;
     --card:#102219;
-    --card2:#13291d;
     --text:#f4f7f3;
     --muted:#aebbb2;
     --green:#a8d56f;
-    --green2:#6f9f45;
-    --line:rgba(255,255,255,.10);
+    --green-dark:#6f9948;
+    --line:rgba(255,255,255,.09);
 }
 
 *{
@@ -50,7 +47,7 @@ a{
     margin:auto;
 }
 
-/* NAVIGATION */
+/* ================= NAVIGATION ================= */
 
 nav{
     position:fixed;
@@ -58,7 +55,7 @@ nav{
     left:0;
     width:100%;
     z-index:1000;
-    background:rgba(7,17,13,.90);
+    background:rgba(7,17,13,.92);
     backdrop-filter:blur(14px);
     border-bottom:1px solid var(--line);
 }
@@ -82,7 +79,7 @@ nav{
 
 .nav-links{
     display:flex;
-    gap:25px;
+    gap:24px;
     font-size:13px;
 }
 
@@ -95,38 +92,44 @@ nav{
     color:var(--green);
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
     min-height:100vh;
     display:flex;
     align-items:center;
-    padding:130px 0 80px;
+    padding:125px 0 75px;
+
     background:
-        radial-gradient(circle at 80% 25%,rgba(125,170,76,.18),transparent 30%),
+        radial-gradient(circle at 82% 30%,rgba(123,166,77,.19),transparent 31%),
         linear-gradient(135deg,#07110d,#102219);
 }
 
 .hero-grid{
     display:grid;
-    grid-template-columns:1.15fr .85fr;
+    grid-template-columns:1.12fr .88fr;
     align-items:center;
-    gap:70px;
+    gap:55px;
+}
+
+.hero-copy{
+    min-width:0;
 }
 
 .eyebrow{
     color:var(--green);
     text-transform:uppercase;
-    letter-spacing:3px;
+    letter-spacing:2.7px;
     font-size:12px;
     margin-bottom:22px;
 }
 
 .hero h1{
-    font-size:clamp(46px,6.5vw,82px);
-    line-height:.98;
-    margin-bottom:28px;
-    letter-spacing:-2px;
+    font-size:clamp(43px,5.2vw,68px);
+    line-height:1.02;
+    letter-spacing:-1.8px;
+    margin-bottom:25px;
+    max-width:760px;
 }
 
 .hero h1 span{
@@ -135,22 +138,23 @@ nav{
 
 .hero-description{
     color:#c2cdc5;
-    font-size:20px;
+    font-size:19px;
+    line-height:1.55;
     max-width:720px;
-    margin-bottom:35px;
+    margin-bottom:32px;
 }
 
 .hero-actions{
     display:flex;
-    gap:14px;
+    gap:13px;
     flex-wrap:wrap;
 }
 
 .btn{
     display:inline-block;
-    padding:13px 22px;
+    padding:13px 21px;
     border-radius:30px;
-    border:1px solid var(--green2);
+    border:1px solid var(--green-dark);
     font-size:14px;
     transition:.3s;
 }
@@ -168,20 +172,45 @@ nav{
 .hero-photo{
     display:flex;
     justify-content:center;
+    align-items:center;
+}
+
+.hero-photo-frame{
+    position:relative;
+    width:430px;
+    height:430px;
+    max-width:80vw;
+    max-height:80vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-photo-frame::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:rgba(168,213,111,.055);
+    box-shadow:0 0 0 13px rgba(168,213,111,.035);
 }
 
 .hero-photo img{
-    width:min(390px,80vw);
-    height:min(390px,80vw);
+    position:relative;
+    width:410px;
+    height:410px;
+    max-width:76vw;
+    max-height:76vw;
     object-fit:cover;
+    object-position:center 35%;
     border-radius:50%;
-    border:4px solid rgba(168,213,111,.75);
+    border:4px solid rgba(168,213,111,.78);
     box-shadow:
-        0 0 0 14px rgba(168,213,111,.05),
-        0 30px 70px rgba(0,0,0,.50);
+        0 0 0 8px rgba(168,213,111,.06),
+        0 30px 70px rgba(0,0,0,.48);
 }
 
-/* GENERAL SECTIONS */
+/* ================= GENERAL ================= */
 
 section{
     padding:100px 0;
@@ -200,19 +229,20 @@ section{
 }
 
 .section-title{
-    font-size:clamp(36px,5vw,58px);
-    line-height:1.05;
-    margin-bottom:25px;
+    font-size:clamp(35px,4.8vw,57px);
+    line-height:1.07;
+    margin-bottom:24px;
+    letter-spacing:-1px;
 }
 
 .section-intro{
     color:var(--muted);
     font-size:18px;
-    max-width:780px;
+    max-width:790px;
     margin-bottom:50px;
 }
 
-/* PROFILE */
+/* ================= PROFILE ================= */
 
 .profile-grid{
     display:grid;
@@ -238,7 +268,7 @@ section{
 .stat{
     background:rgba(255,255,255,.035);
     border:1px solid var(--line);
-    padding:28px;
+    padding:27px;
     border-radius:16px;
 }
 
@@ -253,7 +283,7 @@ section{
     font-size:13px;
 }
 
-/* JOURNEY */
+/* ================= JOURNEY ================= */
 
 .timeline{
     border-left:2px solid #55783b;
@@ -291,10 +321,10 @@ section{
 
 .timeline p{
     color:var(--muted);
-    max-width:750px;
+    max-width:760px;
 }
 
-/* EXPERTISE */
+/* ================= EXPERTISE ================= */
 
 .cards{
     display:grid;
@@ -331,17 +361,17 @@ section{
     font-size:14px;
 }
 
-/* TRANSFORMATION */
+/* ================= TRANSFORMATION ================= */
 
 .transformation{
     display:grid;
     grid-template-columns:repeat(5,1fr);
-    gap:8px;
+    gap:9px;
     margin-top:45px;
 }
 
 .transform-box{
-    padding:25px 15px;
+    padding:25px 14px;
     text-align:center;
     background:var(--card);
     border:1px solid var(--line);
@@ -360,7 +390,7 @@ section{
     font-size:12px;
 }
 
-/* PROJECTS */
+/* ================= INNOVATION ================= */
 
 .project{
     border:1px solid var(--line);
@@ -391,14 +421,14 @@ section{
     display:none;
     padding:0 30px 28px;
     color:var(--muted);
-    max-width:850px;
+    max-width:900px;
 }
 
 .project.active .project-content{
     display:block;
 }
 
-/* GOVERNANCE */
+/* ================= GOVERNANCE ================= */
 
 .credentials{
     display:grid;
@@ -419,7 +449,7 @@ section{
     margin-bottom:7px;
 }
 
-/* THOUGHT LEADERSHIP */
+/* ================= THOUGHT LEADERSHIP ================= */
 
 .thought-grid{
     display:grid;
@@ -443,7 +473,7 @@ section{
     color:var(--muted);
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 
 .contact{
     text-align:center;
@@ -472,7 +502,7 @@ footer{
     font-size:12px;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media(max-width:900px){
 
@@ -521,7 +551,12 @@ footer{
         padding:75px 0;
     }
 
+    .hero{
+        padding-top:105px;
+    }
+
     .hero h1{
+        font-size:43px;
         letter-spacing:-1px;
     }
 
@@ -531,6 +566,11 @@ footer{
     .thought-grid,
     .transformation{
         grid-template-columns:1fr;
+    }
+
+    .hero-photo-frame{
+        width:300px;
+        height:300px;
     }
 
     .hero-photo img{
@@ -545,7 +585,7 @@ footer{
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- ================= NAVIGATION ================= -->
 
 <nav>
 <div class="container nav-inner">
@@ -568,13 +608,13 @@ footer{
 </nav>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
 <div class="container hero-grid">
 
-    <div>
+    <div class="hero-copy">
 
         <div class="eyebrow">
             Seed & Agri-Business · Supply Chain · Digital Transformation
@@ -586,8 +626,8 @@ footer{
         </h1>
 
         <p class="hero-description">
-            President – Supply Chain | CXO Leader | AI & Digital Agriculture |
-            Sustainability | Independent Director
+            President – Supply Chain | CXO Leader | Seed & Agri-Business |
+            AI & Digital Agriculture | Sustainability | Independent Director
         </p>
 
         <div class="hero-actions">
@@ -611,9 +651,13 @@ footer{
 
     <div class="hero-photo">
 
-        <img
-        src="raja-passport.png"
-        alt="Raja Vadlamani — Seed and Agri-Business Supply Chain Leader">
+        <div class="hero-photo-frame">
+
+            <img
+                src="raja-passport.png"
+                alt="Raja Vadlamani — Seed and Agri-Business Supply Chain Leader">
+
+        </div>
 
     </div>
 
@@ -622,7 +666,7 @@ footer{
 </section>
 
 
-<!-- PROFILE -->
+<!-- ================= PROFILE ================= -->
 
 <section id="profile" class="section-dark">
 
@@ -642,22 +686,23 @@ footer{
         <div class="profile-text">
 
             <p>
-                Raja Vadlamani is a senior seed and agri-business supply-chain
-                leader with extensive experience across seed production,
-                processing, storage, planning and distribution.
+                Raja Vadlamani is a senior seed and agri-business
+                supply-chain leader with extensive experience across
+                seed production, processing, storage, planning
+                and distribution.
             </p>
 
             <p>
-                His leadership journey has focused on building resilient
-                supply chains while progressively introducing digital systems,
-                predictive analytics and artificial intelligence into
-                agricultural decision-making.
+                His leadership journey has focused on building
+                resilient supply chains while progressively introducing
+                digital systems, predictive analytics and artificial
+                intelligence into agricultural decision-making.
             </p>
 
             <p>
                 His current interests sit at the intersection of
-                <strong>agriculture, AI, sustainability, climate resilience
-                and governance</strong>.
+                <strong>agriculture, AI, sustainability, climate
+                resilience and governance.</strong>
             </p>
 
         </div>
@@ -701,7 +746,7 @@ footer{
 </section>
 
 
-<!-- JOURNEY -->
+<!-- ================= JOURNEY ================= -->
 
 <section id="journey">
 
@@ -737,7 +782,8 @@ footer{
             <p>
                 Experience across seed production, operations,
                 processing, inventory and distribution created
-                the foundation for a career in agricultural supply chains.
+                the foundation for a career in agricultural
+                supply chains.
             </p>
 
         </div>
@@ -755,8 +801,8 @@ footer{
 
             <p>
                 Played a central role in developing and scaling
-                SeedWorks supply-chain capabilities across production,
-                processing, storage and distribution.
+                SeedWorks supply-chain capabilities across
+                production, processing, storage and distribution.
             </p>
 
         </div>
@@ -813,7 +859,8 @@ footer{
             <p>
                 Focused on the next generation of resilient
                 agricultural supply chains and the role of
-                technology, sustainability and governance in shaping them.
+                technology, sustainability and governance
+                in shaping them.
             </p>
 
         </div>
@@ -825,7 +872,7 @@ footer{
 </section>
 
 
-<!-- EXPERTISE -->
+<!-- ================= EXPERTISE ================= -->
 
 <section id="expertise" class="section-dark">
 
@@ -903,7 +950,7 @@ footer{
 </section>
 
 
-<!-- TRANSFORMATION MODEL -->
+<!-- ================= TRANSFORMATION ================= -->
 
 <section>
 
@@ -918,7 +965,7 @@ footer{
     </h2>
 
     <p class="section-intro">
-        The evolution I see in agricultural supply chains:
+        The evolution of agricultural supply chains:
         from physical movement of material toward connected,
         predictive and climate-aware decision systems.
     </p>
@@ -957,7 +1004,7 @@ footer{
 </section>
 
 
-<!-- INNOVATION -->
+<!-- ================= INNOVATION ================= -->
 
 <section id="innovation" class="section-dark">
 
@@ -1015,16 +1062,14 @@ footer{
 
         <div class="project-content">
 
-            An interactive framework for exploring climate-related
+            An interactive framework exploring climate-related
             measurement across seed and agricultural supply chains.
 
             <br><br>
 
-            <a class="btn btn-primary"
-               href="https://rajavadlamani-png.github.io/"
-               target="_blank">
-               Explore ANVORA
-            </a>
+            <span style="color:#8d9b91;">
+                ANVORA live tool link will be connected here.
+            </span>
 
         </div>
 
@@ -1081,7 +1126,7 @@ footer{
 </section>
 
 
-<!-- GOVERNANCE -->
+<!-- ================= GOVERNANCE ================= -->
 
 <section id="governance">
 
@@ -1130,7 +1175,7 @@ footer{
 </section>
 
 
-<!-- THOUGHT LEADERSHIP -->
+<!-- ================= THOUGHT LEADERSHIP ================= -->
 
 <section id="thought" class="section-dark">
 
@@ -1145,7 +1190,6 @@ footer{
         can become.
     </h2>
 
-
     <div class="thought-grid">
 
         <div class="thought-card">
@@ -1156,7 +1200,7 @@ footer{
 
             <p>
                 <em>
-                AI's Quiet Revolution in Seed Supply Chains
+                    AI's Quiet Revolution in Seed Supply Chains
                 </em>
             </p>
 
@@ -1164,8 +1208,8 @@ footer{
 
             <p>
                 A perspective on how artificial intelligence
-                can quietly transform planning, operations and
-                decision-making across the seed value chain.
+                can quietly transform planning, operations
+                and decision-making across the seed value chain.
             </p>
 
         </div>
@@ -1192,7 +1236,7 @@ footer{
 </section>
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 
 <section id="contact" class="contact">
 
@@ -1218,7 +1262,7 @@ footer{
         <a class="btn btn-primary"
            href="https://www.linkedin.com/"
            target="_blank">
-           LinkedIn
+            LinkedIn
         </a>
 
     </div>
@@ -1234,6 +1278,8 @@ footer{
 
 </footer>
 
+
+<!-- ================= INTERACTIVITY ================= -->
 
 <script>
 
