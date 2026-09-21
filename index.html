@@ -1,1 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raja Vadlamani | Executive Profile</title>
 
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07110d;
+    color: #f4f7f3;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(7,17,13,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #9fcf6b;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+}
+
+.nav-links a {
+    color: #c7d1ca;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b7df83;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 140px 30px 80px;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(104,150,68,0.22), transparent 30%),
+        linear-gradient(135deg, #07110d, #102218);
+}
+
+.hero-inner {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+.eyebrow {
+    color: #a8d56f;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 92px);
+    line-height: 0.95;
+    max-width: 900px;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #a8d56f;
+}
+
+.hero-subtitle {
+    max-width: 780px;
+    font-size: 22px;
+    color: #c8d1ca;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 13px 22px;
+    border-radius: 30px;
+    border: 1px solid #789d54;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: #a8d56f;
+    color: #07110d;
+    font-weight: 700;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 100px 30px;
+}
+
+.section-inner {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-label {
+    color: #a8d56f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-size: clamp(34px, 5vw, 58px);
+    margin-bottom: 25px;
+}
+
+.section-intro {
+    max-width: 780px;
+    color: #b9c5bc;
+    font-size: 18px;
+    margin-bottom: 55px;
+}
+
+.about {
+    background: #0b1812;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+}
+
+.about-text {
+    color: #c5cec7;
+    font-size: 18px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.stat {
+    padding: 28px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03);
+    border-radius: 14px;
+}
+
+.stat-number {
+    font-size: 40px;
+    color: #a8d56f;
+    font-weight: 700;
+}
+
+.stat-label {
+    color: #b9c5bc;
+    font-size: 14px;
+}
+
+.timeline {
+    position: relative;
+    margin-top: 40px;
+    border-left: 2px solid #587840;
+    padding-left: 35px;
+}
+
+.timeline-item {
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #a8d56f;
+    left: -42px;
+    top: 7px;
+}
+
+.timeline-year {
+    color: #a8d56f;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.timeline h3 {
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+
+.timeline p {
+    color: #aebbb2;
+    max-width: 720px;
+}
+
+.capabilities {
+    background: #0b1812;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.025);
+    transition: 0.35s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(168,213,111,0.5);
+}
+
+.card-number {
+    color: #a8d56f;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #aebbb2;
+    font-size: 15px;
+}
+
+.projects {
+    background: #07110d;
+}
+
+.project {
+    padding: 35px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.project:hover {
+    background: rgba(168,213,111,0.04);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.project h3 {
+    font-size: 24px;
+}
+
+.project-toggle {
+    color: #a8d56f;
+    font-size: 22px;
+}
+
+.project-content {
+    display: none;
+    color: #b7c2ba;
+    margin-top: 20px;
+    max-width: 850px;
+}
+
+.project.active .project-content {
+    display: block;
+}
+
+.governance {
+    background: #0b1812;
+}
+
+.credentials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.credential {
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 18px 22px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.025);
+}
+
+.credential strong {
+    display: block;
+    color: #a8d56f;
+    margin-bottom: 4px;
+}
+
+.thought {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.thought-card {
+    padding: 35px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.thought-card h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.thought-card p {
+    color: #b3c0b7;
+}
+
+.contact {
+    text-align: center;
+    background:
+        radial-gradient(circle at center, rgba(104,150,68,0.16), transparent 45%),
+        #07110d;
+}
+
+.contact h2 {
+    font-size: clamp(38px, 6vw, 65px);
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: #b8c3bc;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #738077;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+@media(max-width: 850px) {
+    .nav-links {
+        display: none;
+    }
+
+    .about-grid,
+    .thought {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 550px) {
+    section {
+        padding: 75px 20px;
+    }
+
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .project-header {
+        align-items: flex-start;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <div class="logo">RAJA <span>VADLAMANI</span></div>
+
+        <div class="nav-links">
+            <a href="#about">Profile</a>
+            <a href="#journey">Journey</a>
+            <a href="#capabilities">Expertise</a>
+            <a href="#projects">Innovation</a>
+            <a href="#governance">Governance</a>
+            <a href="#contact">Connect</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-inner">
+
+        <div class="eyebrow">
+            CXO Leader · Seed & Agri-Business · Digital Transformation
+        </div>
+
+        <h1>
+            Transforming <span>Seed Supply Chains</span> for a Digital, Climate-Resilient Future.
+        </h1>
+
+        <p class="hero-subtitle">
+            President – Supply Chain | CXO Leader | AI & Digital Agriculture |
+            Sustainability | Independent Director
+        </p>
+
+        <div class="hero-buttons">
+            <a class="btn btn-primary" href="#about">Explore Profile</a>
+            <a class="btn" href="#contact">Connect</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="section-inner">
+
+        <div class="section-label">Executive Profile</div>
+
+        <h2 class="section-title">
+            Building supply chains that move from physical efficiency to intelligent systems.
+        </h2>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    Raja Vadlamani is a senior seed and agri-business supply-chain
+                    leader with extensive experience across seed production,
+                    processing, storage, planning and distribution.
+                </p>
+
+                <p>
+                    His work focuses on connecting operational excellence with
+                    digital technologies, artificial intelligence, resource
+                    efficiency and climate resilience.
+                </p>
+
+                <p>
+                    At the intersection of agriculture and technology, he has
+                    worked on predictive planning, digital traceability,
+                    supply-chain transformation and emerging applications of AI
+                    in seed production.
+                </p>
+
+            </div>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <div class="stat-number">38+</div>
+                    <div class="stat-label">Years of professional experience</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">18</div>
+                    <div class="stat-label">Years building SeedWorks supply chain</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">AI</div>
+                    <div class="stat-label">Digital agriculture & predictive analytics</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-number">IOD</div>
+                    <div class="stat-label">Independent Director certification</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="journey">
+    <div class="section-inner">
+
+        <div class="section-label">Leadership Journey</div>
+
+        <h2 class="section-title">From operations to transformation.</h2>
+
+        <p class="section-intro">
+            A career shaped by the evolution of India's seed supply chains
+            and the transition from conventional operations toward
+            technology-enabled agriculture.
+        </p>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-year">EARLY CAREER</div>
+                <h3>Seed Supply Chain Foundations</h3>
+                <p>
+                    Built experience across the fundamentals of seed production,
+                    operations, processing, inventory and distribution.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">SEEDWORKS</div>
+                <h3>Building the Supply Chain</h3>
+                <p>
+                    Played a central role in developing and scaling the SeedWorks
+                    supply-chain ecosystem across production, processing,
+                    storage and distribution.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">DIGITAL TRANSFORMATION</div>
+                <h3>Connecting Data with Decisions</h3>
+                <p>
+                    Advanced the use of SAP, digital traceability, predictive
+                    analytics and AI-enabled planning within seed operations.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">TODAY</div>
+                <h3>AI, Climate & Governance</h3>
+                <p>
+                    Focused on the next generation of seed supply chains,
+                    resource efficiency, climate resilience, AI applications
+                    and board-level governance.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="capabilities" id="capabilities">
+    <div class="section-inner">
+
+        <div class="section-label">Core Expertise</div>
+
+        <h2 class="section-title">Where experience meets innovation.</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-number">01</div>
+                <h3>Seed Supply Chain</h3>
+                <p>
+                    End-to-end supply-chain strategy covering production,
+                    processing, storage, inventory and distribution.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-number">02</div>
+                <h3>AI & Analytics</h3>
+                <p>
+                    Applying predictive analytics, machine learning and
+                    decision-support systems to agricultural operations.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-number">03</div>
+                <h3>Digital Agriculture</h3>
+                <p>
+                    Connecting field data, satellite imagery, weather data,
+                    traceability and enterprise systems.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-number">04</div>
+                <h3>Sustainability</h3>
+                <p>
+                    Resource efficiency, climate resilience, carbon measurement
+                    and sustainable agricultural supply chains.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-number">05</div>
+                <h3>Transformation</h3>
+                <p>
+                    Turning operational challenges into scalable processes,
+                    systems and measurable business outcomes.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-number">06</div>
+                <h3>Strategic Leadership</h3>
+                <p>
+                    Cross-functional leadership, governance, strategy and
+                    executive decision-making in agri-business.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="projects" id="projects">
+    <div class="section-inner">
+
+        <div class="section-label">Innovation Portfolio</div>
+
+        <h2 class="section-title">Ideas becoming practical tools.</h2>
+
+        <p class="section-intro">
+            Selected initiatives connecting agriculture, technology,
+            analytics and sustainability.
+        </p>
+
+        <div class="project">
+            <div class="project-header">
+                <h3>AI-Driven Seed Production Planning</h3>
+                <div class="project-toggle">+</div>
+            </div>
+
+            <div class="project-content">
+                Predictive and prescriptive analytics for seed production
+                planning using historical production data, geography,
+                hybrid-level information and environmental variables.
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <h3>ANVORA — Seed Climate Ledger</h3>
+                <div class="project-toggle">+</div>
+            </div>
+
+            <div class="project-content">
+                An interactive framework exploring the measurement of
+                climate-related impacts across seed and agricultural
+                supply chains. This section will later connect directly
+                to the live ANVORA calculator.
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <h3>Digital Seed Traceability</h3>
+                <div class="project-toggle">+</div>
+            </div>
+
+            <div class="project-content">
+                Exploring digital traceability, QR-based systems and
+                integration between field-level information and
+                downstream seed processing systems.
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <h3>Climate-Resilient Seed Supply Chains</h3>
+                <div class="project-toggle">+</div>
+            </div>
+
+            <div class="project-content">
+                Integrating resource efficiency, climate data,
+                carbon measurement and supply-chain decision making
+                into the future design of seed systems.
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="governance" id="governance">
+    <div class="section-inner">
+
+        <div class="section-label">Governance</div>
+
+        <h2 class="section-title">Preparing experience for the boardroom.</h2>
+
+        <p class="section-intro">
+            Combining operating experience with formal governance education
+            and an interest in strategic oversight.
+        </p>
+
+        <div class="credentials">
+
+            <div class="credential">
+                <strong>IOD</strong>
+                Institute of Directors
+            </div>
+
+            <div class="credential">
+                <strong>IICA</strong>
+                Independent Director Proficiency
+            </div>
+
+            <div class="credential">
+                <strong>Board Perspective</strong>
+                Strategy · Risk · Sustainability
+            </div>
+
+            <div class="credential">
+                <strong>Industry</strong>
+                Seed · Agriculture · Supply Chain
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="section-inner">
+
+        <div class="section-label">Thought Leadership</div>
+
+        <h2 class="section-title">
+            Sharing what agriculture can become.
+        </h2>
+
+        <div class="thought">
+
+            <div class="thought-card">
+                <h3>The Invisible Helper</h3>
+                <p>
+                    <em>AI's Quiet Revolution in Seed Supply Chains</em>
+                </p>
+                <br>
+                <p>
+                    A perspective on how artificial intelligence can quietly
+                    transform planning, operations and decision-making
+                    across the seed value chain.
+                </p>
+            </div>
+
+            <div class="thought-card">
+                <h3>New-Age Seed Supply Chains</h3>
+                <p>
+                    Exploring the future of seed systems through AI,
+                    digital agriculture, sustainability, resource efficiency
+                    and new operating models.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+
+    <div class="section-inner">
+
+        <div class="section-label">Connect</div>
+
+        <h2>Let's shape what comes next.</h2>
+
+        <p>
+            Open to conversations around seed and agri-business leadership,
+            strategic transformation, AI-enabled agriculture, sustainability,
+            advisory opportunities and independent director engagements.
+        </p>
+
+        <div class="hero-buttons" style="justify-content:center;">
+
+            <a class="btn btn-primary"
+               href="https://www.linkedin.com/"
+               target="_blank">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Raja Vadlamani · Executive Profile
+</footer>
+
+<script>
+
+document.querySelectorAll(".project").forEach(project => {
+
+    project.addEventListener("click", () => {
+
+        project.classList.toggle("active");
+
+        const symbol = project.querySelector(".project-toggle");
+
+        symbol.textContent =
+            project.classList.contains("active") ? "−" : "+";
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
