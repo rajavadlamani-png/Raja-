@@ -20,15 +20,9 @@
     --line:rgba(255,255,255,.09);
 }
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0;}
 
-html{
-    scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
 body{
     font-family:Arial,Helvetica,sans-serif;
@@ -37,17 +31,14 @@ body{
     line-height:1.6;
 }
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
+a{text-decoration:none;color:inherit;}
 
 .container{
     width:min(1180px,92%);
     margin:auto;
 }
 
-/* ================= NAVIGATION ================= */
+/* NAVIGATION */
 
 nav{
     position:fixed;
@@ -73,9 +64,7 @@ nav{
     letter-spacing:1px;
 }
 
-.logo span{
-    color:var(--green);
-}
+.logo span{color:var(--green);}
 
 .nav-links{
     display:flex;
@@ -88,18 +77,15 @@ nav{
     transition:.25s;
 }
 
-.nav-links a:hover{
-    color:var(--green);
-}
+.nav-links a:hover{color:var(--green);}
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
     min-height:100vh;
     display:flex;
     align-items:center;
     padding:125px 0 75px;
-
     background:
         radial-gradient(circle at 82% 30%,rgba(123,166,77,.19),transparent 31%),
         linear-gradient(135deg,#07110d,#102219);
@@ -112,9 +98,7 @@ nav{
     gap:55px;
 }
 
-.hero-copy{
-    min-width:0;
-}
+.hero-copy{min-width:0;}
 
 .eyebrow{
     color:var(--green);
@@ -132,9 +116,7 @@ nav{
     max-width:760px;
 }
 
-.hero h1 span{
-    color:var(--green);
-}
+.hero h1 span{color:var(--green);}
 
 .hero-description{
     color:#c2cdc5;
@@ -159,9 +141,7 @@ nav{
     transition:.3s;
 }
 
-.btn:hover{
-    transform:translateY(-3px);
-}
+.btn:hover{transform:translateY(-3px);}
 
 .btn-primary{
     background:var(--green);
@@ -210,15 +190,11 @@ nav{
         0 30px 70px rgba(0,0,0,.48);
 }
 
-/* ================= GENERAL ================= */
+/* GENERAL SECTIONS */
 
-section{
-    padding:100px 0;
-}
+section{padding:100px 0;}
 
-.section-dark{
-    background:var(--bg2);
-}
+.section-dark{background:var(--bg2);}
 
 .section-label{
     color:var(--green);
@@ -242,7 +218,7 @@ section{
     margin-bottom:50px;
 }
 
-/* ================= PROFILE ================= */
+/* PROFILE */
 
 .profile-grid{
     display:grid;
@@ -255,9 +231,7 @@ section{
     font-size:17px;
 }
 
-.profile-text p{
-    margin-bottom:20px;
-}
+.profile-text p{margin-bottom:20px;}
 
 .stats{
     display:grid;
@@ -283,48 +257,93 @@ section{
     font-size:13px;
 }
 
-/* ================= JOURNEY ================= */
+/* LEADERSHIP JOURNEY */
 
-.timeline{
-    border-left:2px solid #55783b;
-    padding-left:35px;
-    margin-top:30px;
-}
-
-.timeline-item{
+.journey-wrap{
     position:relative;
-    margin-bottom:45px;
+    margin-top:55px;
 }
 
-.timeline-item:before{
-    content:"";
+.journey-line{
     position:absolute;
-    width:12px;
-    height:12px;
-    background:var(--green);
-    border-radius:50%;
-    left:-42px;
-    top:8px;
+    left:23px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:linear-gradient(
+        to bottom,
+        var(--green),
+        rgba(168,213,111,.15)
+    );
 }
 
-.timeline-year{
+.journey-item{
+    position:relative;
+    display:grid;
+    grid-template-columns:75px 1fr;
+    gap:30px;
+    margin-bottom:42px;
+}
+
+.journey-marker{
+    position:relative;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:var(--bg);
+    border:2px solid var(--green);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:2;
     color:var(--green);
     font-size:12px;
-    letter-spacing:2px;
     font-weight:bold;
 }
 
-.timeline h3{
-    font-size:24px;
-    margin:7px 0;
+.journey-card{
+    padding:28px 30px;
+    border:1px solid var(--line);
+    border-radius:16px;
+    background:rgba(255,255,255,.025);
+    transition:.3s;
 }
 
-.timeline p{
+.journey-card:hover{
+    transform:translateX(5px);
+    border-color:rgba(168,213,111,.4);
+}
+
+.journey-period{
+    color:var(--green);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:11px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.journey-card h3{
+    font-size:25px;
+    margin-bottom:10px;
+}
+
+.journey-card p{
     color:var(--muted);
-    max-width:760px;
+    max-width:850px;
 }
 
-/* ================= EXPERTISE ================= */
+.journey-highlight{
+    margin-top:16px;
+    padding-top:14px;
+    border-top:1px solid var(--line);
+    color:#d8e1da;
+    font-size:14px;
+}
+
+.journey-highlight strong{color:var(--green);}
+
+/* EXPERTISE */
 
 .cards{
     display:grid;
@@ -361,7 +380,7 @@ section{
     font-size:14px;
 }
 
-/* ================= TRANSFORMATION ================= */
+/* TRANSFORMATION */
 
 .transformation{
     display:grid;
@@ -390,7 +409,7 @@ section{
     font-size:12px;
 }
 
-/* ================= INNOVATION ================= */
+/* INNOVATION */
 
 .project{
     border:1px solid var(--line);
@@ -408,9 +427,7 @@ section{
     cursor:pointer;
 }
 
-.project-header h3{
-    font-size:22px;
-}
+.project-header h3{font-size:22px;}
 
 .project-icon{
     color:var(--green);
@@ -424,11 +441,9 @@ section{
     max-width:900px;
 }
 
-.project.active .project-content{
-    display:block;
-}
+.project.active .project-content{display:block;}
 
-/* ================= GOVERNANCE ================= */
+/* GOVERNANCE */
 
 .credentials{
     display:grid;
@@ -449,7 +464,7 @@ section{
     margin-bottom:7px;
 }
 
-/* ================= THOUGHT LEADERSHIP ================= */
+/* THOUGHT LEADERSHIP */
 
 .thought-grid{
     display:grid;
@@ -469,11 +484,9 @@ section{
     margin-bottom:10px;
 }
 
-.thought-card p{
-    color:var(--muted);
-}
+.thought-card p{color:var(--muted);}
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 
 .contact{
     text-align:center;
@@ -494,6 +507,8 @@ section{
     margin:0 auto 30px;
 }
 
+/* FOOTER */
+
 footer{
     border-top:1px solid var(--line);
     padding:30px;
@@ -502,58 +517,45 @@ footer{
     font-size:12px;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media(max-width:900px){
 
-    .nav-links{
-        display:none;
-    }
+    .nav-links{display:none;}
 
     .hero-grid,
     .profile-grid{
         grid-template-columns:1fr;
     }
 
-    .hero{
-        text-align:center;
-    }
+    .hero{text-align:center;}
 
     .hero-description{
         margin-left:auto;
         margin-right:auto;
     }
 
-    .hero-actions{
-        justify-content:center;
-    }
+    .hero-actions{justify-content:center;}
 
-    .hero-photo{
-        order:-1;
-    }
+    .hero-photo{order:-1;}
 
-    .cards{
-        grid-template-columns:1fr 1fr;
-    }
+    .cards{grid-template-columns:1fr 1fr;}
 
-    .credentials{
-        grid-template-columns:1fr 1fr;
-    }
+    .credentials{grid-template-columns:1fr 1fr;}
 
-    .transformation{
-        grid-template-columns:1fr 1fr;
+    .transformation{grid-template-columns:1fr 1fr;}
+
+    .journey-item{
+        grid-template-columns:60px 1fr;
+        gap:20px;
     }
 }
 
 @media(max-width:600px){
 
-    section{
-        padding:75px 0;
-    }
+    section{padding:75px 0;}
 
-    .hero{
-        padding-top:105px;
-    }
+    .hero{padding-top:105px;}
 
     .hero h1{
         font-size:43px;
@@ -578,14 +580,33 @@ footer{
         height:280px;
     }
 
-}
+    .journey-line{left:18px;}
 
+    .journey-item{
+        grid-template-columns:45px 1fr;
+        gap:15px;
+    }
+
+    .journey-marker{
+        width:38px;
+        height:38px;
+        font-size:10px;
+    }
+
+    .journey-card{
+        padding:22px;
+    }
+
+    .journey-card h3{
+        font-size:21px;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<!-- ================= NAVIGATION ================= -->
+<!-- NAVIGATION -->
 
 <nav>
 <div class="container nav-inner">
@@ -608,7 +629,7 @@ footer{
 </nav>
 
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -631,7 +652,6 @@ footer{
         </p>
 
         <div class="hero-actions">
-
             <a class="btn btn-primary" href="#profile">
                 Explore My Journey
             </a>
@@ -643,7 +663,6 @@ footer{
             <a class="btn" href="#contact">
                 Connect
             </a>
-
         </div>
 
     </div>
@@ -655,7 +674,8 @@ footer{
 
             <img
                 src="raja-passport.png"
-                alt="Raja Vadlamani — Seed and Agri-Business Supply Chain Leader">
+                alt="Raja Vadlamani — Seed and Agri-Business Supply Chain Leader"
+            >
 
         </div>
 
@@ -666,7 +686,7 @@ footer{
 </section>
 
 
-<!-- ================= PROFILE ================= -->
+<!-- PROFILE -->
 
 <section id="profile" class="section-dark">
 
@@ -687,39 +707,48 @@ footer{
 
             <p>
                 Raja Vadlamani is a senior seed and agri-business
-                supply-chain leader with extensive experience across
-                seed production, processing, storage, planning
-                and distribution.
+                supply-chain leader with almost four decades of
+                professional experience across seed production,
+                processing, storage, planning and distribution.
             </p>
 
             <p>
-                His leadership journey has focused on building
-                resilient supply chains while progressively introducing
+                He has spent nearly two decades with SeedWorks,
+                helping build and evolve supply-chain capabilities
+                across the seed value chain.
+            </p>
+
+            <p>
+                His leadership journey has progressively moved from
+                physical operations and supply-chain execution toward
                 digital systems, predictive analytics and artificial
-                intelligence into agricultural decision-making.
+                intelligence in agricultural decision-making.
             </p>
 
             <p>
                 His current interests sit at the intersection of
-                <strong>agriculture, AI, sustainability, climate
-                resilience and governance.</strong>
+                <strong>
+                    agriculture, AI, sustainability, climate resilience
+                    and governance.
+                </strong>
             </p>
 
         </div>
 
+
         <div class="stats">
 
             <div class="stat">
-                <div class="stat-number">38+</div>
+                <div class="stat-number">39+</div>
                 <div class="stat-label">
                     Years of professional experience
                 </div>
             </div>
 
             <div class="stat">
-                <div class="stat-number">18</div>
+                <div class="stat-number">19+</div>
                 <div class="stat-label">
-                    Years building SeedWorks supply chains
+                    Years with SeedWorks
                 </div>
             </div>
 
@@ -746,7 +775,7 @@ footer{
 </section>
 
 
-<!-- ================= JOURNEY ================= -->
+<!-- LEADERSHIP JOURNEY -->
 
 <section id="journey">
 
@@ -757,111 +786,198 @@ footer{
     </div>
 
     <h2 class="section-title">
-        From physical supply chains<br>
-        to intelligent systems.
+        Four decades of evolution.<br>
+        One continuous transformation.
     </h2>
 
     <p class="section-intro">
-        A career shaped by the evolution of seed supply chains
-        and the transition from conventional operations to
-        technology-enabled agriculture.
+        A career shaped by the evolution of agricultural supply chains —
+        from hands-on operations and physical infrastructure to digital
+        systems, artificial intelligence, climate resilience and governance.
     </p>
 
-    <div class="timeline">
 
-        <div class="timeline-item">
+    <div class="journey-wrap">
 
-            <div class="timeline-year">
-                EARLY CAREER
+        <div class="journey-line"></div>
+
+
+        <!-- STAGE 1 -->
+
+        <div class="journey-item">
+
+            <div class="journey-marker">
+                01
             </div>
 
-            <h3>
-                Building Supply Chain Foundations
-            </h3>
+            <div class="journey-card">
 
-            <p>
-                Experience across seed production, operations,
-                processing, inventory and distribution created
-                the foundation for a career in agricultural
-                supply chains.
-            </p>
+                <div class="journey-period">
+                    Early Career
+                </div>
+
+                <h3>
+                    Learning the Reality of Agricultural Operations
+                </h3>
+
+                <p>
+                    The foundation was built close to the operation —
+                    understanding production, processing, inventory,
+                    movement of material and the realities of agricultural
+                    supply chains.
+                </p>
+
+                <div class="journey-highlight">
+                    <strong>Foundation:</strong>
+                    Operations · Execution · Supply Chain Discipline
+                </div>
+
+            </div>
 
         </div>
 
 
-        <div class="timeline-item">
+        <!-- STAGE 2 -->
 
-            <div class="timeline-year">
-                SEEDWORKS
+        <div class="journey-item">
+
+            <div class="journey-marker">
+                02
             </div>
 
-            <h3>
-                Building the Supply Chain
-            </h3>
+            <div class="journey-card">
 
-            <p>
-                Played a central role in developing and scaling
-                SeedWorks supply-chain capabilities across
-                production, processing, storage and distribution.
-            </p>
+                <div class="journey-period">
+                    SeedWorks · Nearly 20 Years
+                </div>
+
+                <h3>
+                    Building and Scaling the Seed Supply Chain
+                </h3>
+
+                <p>
+                    Over nearly two decades at SeedWorks, the focus has
+                    been on building and strengthening supply-chain
+                    capabilities across seed production, processing,
+                    storage, inventory planning and distribution.
+                </p>
+
+                <div class="journey-highlight">
+                    <strong>19+ years:</strong>
+                    Building, scaling and transforming seed supply-chain
+                    capabilities.
+                </div>
+
+            </div>
 
         </div>
 
 
-        <div class="timeline-item">
+        <!-- STAGE 3 -->
 
-            <div class="timeline-year">
-                DIGITAL TRANSFORMATION
+        <div class="journey-item">
+
+            <div class="journey-marker">
+                03
             </div>
 
-            <h3>
-                Connecting Data with Decisions
-            </h3>
+            <div class="journey-card">
 
-            <p>
-                Advanced digital systems, enterprise platforms,
-                traceability and predictive analytics to improve
-                planning and operational decision-making.
-            </p>
+                <div class="journey-period">
+                    Digital Transformation
+                </div>
+
+                <h3>
+                    From Processes to Connected Systems
+                </h3>
+
+                <p>
+                    The next evolution connected operational processes
+                    with enterprise systems, digital workflows,
+                    traceability and data. The objective moved beyond
+                    digitising transactions toward creating better
+                    visibility and stronger decision-making.
+                </p>
+
+                <div class="journey-highlight">
+                    <strong>Shift:</strong>
+                    Physical processes → Digital processes → Connected data
+                </div>
+
+            </div>
 
         </div>
 
 
-        <div class="timeline-item">
+        <!-- STAGE 4 -->
 
-            <div class="timeline-year">
-                AI & AGRICULTURE
+        <div class="journey-item">
+
+            <div class="journey-marker">
+                04
             </div>
 
-            <h3>
-                Moving Toward Intelligent Supply Chains
-            </h3>
+            <div class="journey-card">
 
-            <p>
-                Exploring AI, machine learning, satellite imagery,
-                weather data and predictive models for seed
-                production and supply-chain planning.
-            </p>
+                <div class="journey-period">
+                    AI & Digital Agriculture
+                </div>
+
+                <h3>
+                    Moving from Historical Data to Predictive Intelligence
+                </h3>
+
+                <p>
+                    The focus expanded toward artificial intelligence,
+                    machine learning and predictive analytics for
+                    agricultural decision-making — including seed
+                    production planning, yield prediction, demand
+                    forecasting and supply-chain optimisation.
+                </p>
+
+                <div class="journey-highlight">
+                    <strong>Emerging frontier:</strong>
+                    Satellite imagery · Weather data · AI · Predictive
+                    & prescriptive analytics
+                </div>
+
+            </div>
 
         </div>
 
 
-        <div class="timeline-item">
+        <!-- STAGE 5 -->
 
-            <div class="timeline-year">
-                TODAY
+        <div class="journey-item">
+
+            <div class="journey-marker">
+                05
             </div>
 
-            <h3>
-                AI · Climate · Sustainability · Governance
-            </h3>
+            <div class="journey-card">
 
-            <p>
-                Focused on the next generation of resilient
-                agricultural supply chains and the role of
-                technology, sustainability and governance
-                in shaping them.
-            </p>
+                <div class="journey-period">
+                    Today & Beyond
+                </div>
+
+                <h3>
+                    AI · Climate · Sustainability · Governance
+                </h3>
+
+                <p>
+                    Today the journey is expanding beyond operational
+                    transformation toward the broader question of how
+                    technology, climate intelligence, resource efficiency
+                    and governance can reshape the future of agriculture.
+                </p>
+
+                <div class="journey-highlight">
+                    <strong>Current focus:</strong>
+                    Intelligent supply chains · Climate resilience ·
+                    Sustainability · Governance
+                </div>
+
+            </div>
 
         </div>
 
@@ -872,7 +988,7 @@ footer{
 </section>
 
 
-<!-- ================= EXPERTISE ================= -->
+<!-- EXPERTISE -->
 
 <section id="expertise" class="section-dark">
 
@@ -902,8 +1018,8 @@ footer{
             <div class="card-number">02</div>
             <h3>AI & Analytics</h3>
             <p>
-                Predictive analytics, machine learning and
-                decision-support systems for agricultural operations.
+                Predictive analytics, machine learning and decision-support
+                systems for agricultural operations.
             </p>
         </div>
 
@@ -911,8 +1027,8 @@ footer{
             <div class="card-number">03</div>
             <h3>Digital Agriculture</h3>
             <p>
-                Connecting field data, satellite imagery,
-                weather information, traceability and enterprise systems.
+                Connecting field data, satellite imagery, weather
+                information, traceability and enterprise systems.
             </p>
         </div>
 
@@ -920,8 +1036,8 @@ footer{
             <div class="card-number">04</div>
             <h3>Climate & Sustainability</h3>
             <p>
-                Resource efficiency, climate resilience,
-                carbon measurement and sustainable agriculture.
+                Resource efficiency, climate resilience, carbon
+                measurement and sustainable agriculture.
             </p>
         </div>
 
@@ -938,8 +1054,8 @@ footer{
             <div class="card-number">06</div>
             <h3>Strategic Leadership</h3>
             <p>
-                Cross-functional leadership, strategy,
-                governance and executive decision-making.
+                Cross-functional leadership, strategy, governance
+                and executive decision-making.
             </p>
         </div>
 
@@ -950,7 +1066,7 @@ footer{
 </section>
 
 
-<!-- ================= TRANSFORMATION ================= -->
+<!-- TRANSFORMATION PHILOSOPHY -->
 
 <section>
 
@@ -965,9 +1081,9 @@ footer{
     </h2>
 
     <p class="section-intro">
-        The evolution of agricultural supply chains:
-        from physical movement of material toward connected,
-        predictive and climate-aware decision systems.
+        The evolution of agricultural supply chains: from physical
+        movement of material toward connected, predictive and
+        climate-aware decision systems.
     </p>
 
     <div class="transformation">
@@ -1004,7 +1120,7 @@ footer{
 </section>
 
 
-<!-- ================= INNOVATION ================= -->
+<!-- INNOVATION -->
 
 <section id="innovation" class="section-dark">
 
@@ -1019,30 +1135,22 @@ footer{
     </h2>
 
     <p class="section-intro">
-        Selected areas where agriculture, technology,
-        analytics and sustainability come together.
-        Click each initiative to explore.
+        Selected areas where agriculture, technology, analytics and
+        sustainability come together. Click each initiative to explore.
     </p>
 
 
     <div class="project">
 
         <div class="project-header">
-
-            <h3>
-                AI-Driven Seed Production Planning
-            </h3>
-
+            <h3>AI-Driven Seed Production Planning</h3>
             <div class="project-icon">+</div>
-
         </div>
 
         <div class="project-content">
-
-            Predictive and prescriptive analytics for seed
-            production planning using historical production,
-            hybrid, geography and environmental information.
-
+            Predictive and prescriptive analytics for seed production
+            planning using historical production, hybrid, geography
+            and environmental information.
         </div>
 
     </div>
@@ -1051,26 +1159,18 @@ footer{
     <div class="project">
 
         <div class="project-header">
-
-            <h3>
-                ANVORA — Seed Climate Ledger
-            </h3>
-
+            <h3>ANVORA — Seed Climate Ledger</h3>
             <div class="project-icon">+</div>
-
         </div>
 
         <div class="project-content">
-
             An interactive framework exploring climate-related
             measurement across seed and agricultural supply chains.
-
             <br><br>
 
             <span style="color:#8d9b91;">
                 ANVORA live tool link will be connected here.
             </span>
-
         </div>
 
     </div>
@@ -1079,21 +1179,14 @@ footer{
     <div class="project">
 
         <div class="project-header">
-
-            <h3>
-                Digital Seed Traceability
-            </h3>
-
+            <h3>Digital Seed Traceability</h3>
             <div class="project-icon">+</div>
-
         </div>
 
         <div class="project-content">
-
             Exploring digital traceability, QR-based systems,
             field-level data and integration with downstream
             seed processing systems.
-
         </div>
 
     </div>
@@ -1102,21 +1195,14 @@ footer{
     <div class="project">
 
         <div class="project-header">
-
-            <h3>
-                Climate-Resilient Seed Supply Chains
-            </h3>
-
+            <h3>Climate-Resilient Seed Supply Chains</h3>
             <div class="project-icon">+</div>
-
         </div>
 
         <div class="project-content">
-
-            Integrating resource efficiency, climate data,
-            carbon measurement and supply-chain decision-making
-            into the future design of seed systems.
-
+            Integrating resource efficiency, climate data, carbon
+            measurement and supply-chain decision-making into
+            the future design of seed systems.
         </div>
 
     </div>
@@ -1126,7 +1212,7 @@ footer{
 </section>
 
 
-<!-- ================= GOVERNANCE ================= -->
+<!-- GOVERNANCE -->
 
 <section id="governance">
 
@@ -1142,8 +1228,8 @@ footer{
     </h2>
 
     <p class="section-intro">
-        Combining deep operating experience with formal
-        governance education and an interest in strategic oversight.
+        Combining deep operating experience with formal governance
+        education and an interest in strategic oversight.
     </p>
 
     <div class="credentials">
@@ -1175,7 +1261,7 @@ footer{
 </section>
 
 
-<!-- ================= THOUGHT LEADERSHIP ================= -->
+<!-- THOUGHT LEADERSHIP -->
 
 <section id="thought" class="section-dark">
 
@@ -1194,9 +1280,7 @@ footer{
 
         <div class="thought-card">
 
-            <h3>
-                The Invisible Helper
-            </h3>
+            <h3>The Invisible Helper</h3>
 
             <p>
                 <em>
@@ -1207,9 +1291,9 @@ footer{
             <br>
 
             <p>
-                A perspective on how artificial intelligence
-                can quietly transform planning, operations
-                and decision-making across the seed value chain.
+                A perspective on how artificial intelligence can
+                quietly transform planning, operations and
+                decision-making across the seed value chain.
             </p>
 
         </div>
@@ -1217,14 +1301,12 @@ footer{
 
         <div class="thought-card">
 
-            <h3>
-                New-Age Seed Supply Chains
-            </h3>
+            <h3>New-Age Seed Supply Chains</h3>
 
             <p>
-                Exploring the future of seed systems through
-                AI, digital agriculture, sustainability,
-                resource efficiency and new operating models.
+                Exploring the future of seed systems through AI,
+                digital agriculture, sustainability, resource
+                efficiency and new operating models.
             </p>
 
         </div>
@@ -1236,7 +1318,7 @@ footer{
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 
 <section id="contact" class="contact">
 
@@ -1251,17 +1333,18 @@ footer{
     </h2>
 
     <p>
-        Open to conversations around seed and agri-business
-        leadership, strategic transformation, AI-enabled
-        agriculture, sustainability, advisory opportunities
-        and independent director engagements.
+        Open to conversations around seed and agri-business leadership,
+        strategic transformation, AI-enabled agriculture, sustainability,
+        advisory opportunities and independent director engagements.
     </p>
 
     <div class="hero-actions" style="justify-content:center;">
 
-        <a class="btn btn-primary"
-           href="https://www.linkedin.com/"
-           target="_blank">
+        <a
+            class="btn btn-primary"
+            href="https://www.linkedin.com/"
+            target="_blank"
+        >
             LinkedIn
         </a>
 
@@ -1272,32 +1355,33 @@ footer{
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
-
     © 2026 Raja Vadlamani · Executive Profile
-
 </footer>
 
 
-<!-- ================= INTERACTIVITY ================= -->
+<!-- INTERACTION -->
 
 <script>
 
 document.querySelectorAll(".project").forEach(function(project){
 
-    project.querySelector(".project-header").addEventListener("click",function(){
+    project
+        .querySelector(".project-header")
+        .addEventListener("click",function(){
 
-        project.classList.toggle("active");
+            project.classList.toggle("active");
 
-        var icon=project.querySelector(".project-icon");
+            var icon=project.querySelector(".project-icon");
 
-        if(project.classList.contains("active")){
-            icon.textContent="−";
-        }else{
-            icon.textContent="+";
-        }
+            icon.textContent =
+                project.classList.contains("active")
+                ? "−"
+                : "+";
 
-    });
+        });
 
 });
 
